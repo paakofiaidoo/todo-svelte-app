@@ -1,12 +1,12 @@
 # Todo svelte app
 
-this is abasic todo-application built in the svelte framework
+this is a basic todo-application built in the svelte framework
 
 
 ## Get started
 if using yarn
 ```bash
-git clone 
+git clone https://github.com/paakofiaidoo/todo-svelte-app
 cd svelte-app
 yarn
 yarn dev
