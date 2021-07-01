@@ -1,17 +1,18 @@
 <script>
+  import TodoItem from "./atoms/TodoItem.svelte";
   import Collection from "./components/Collection.svelte";
   import SideMenu from "./components/SideMenu.svelte";
 
   export let collections;
+  let active = 0;
+
 </script>
 
 <div class="content">
-  <SideMenu {collections} />
+  <SideMenu bind:active {collections} />
   <main>
     <h1>My ToDO List</h1>
-    {#each collections as collection}
-      <Collection {...collection} />
-    {/each}
+    <Collection {...collections[active]} />
   </main>
 </div>
 

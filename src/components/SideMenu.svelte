@@ -1,15 +1,21 @@
 <script>
-  export let collections;
+  export let collections, active;
   let isActive = false;
+  
 </script>
 
 <nav class={`navbar ${isActive ? "isActive" : ""}`}>
   <button on:click={() => (isActive = !isActive)} class={`arrow `} />
   <p>Collections</p>
-  {#each collections as { name, color }}
+  {#each collections as { name, color }, i}
     <div class="menu">
       <span style={`background-color: ${color}`} />
-      <li class={`menuItem`}>
+      <li
+        class={`menuItem`}
+        on:click={() => {
+          active = i;
+        }}
+      >
         {name}
       </li>
     </div>
