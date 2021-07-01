@@ -2,7 +2,7 @@
   export let title, isComplete, i;
 </script>
 
-<div>
+<div class="listItem">
   <input type="checkbox" id={i} name={i} bind:value={isComplete} />
   <label for={i}> {title}</label>
 </div>
@@ -14,6 +14,7 @@
     height: 2rem;
     background-color: #999;
     margin: 0.5rem;
+    width: 100%;
     justify-content: center;
   }
 </style>
