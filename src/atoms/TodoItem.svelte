@@ -14,7 +14,8 @@
     height: 2rem;
     background-color: #999;
     margin: 0.5rem;
-    width: 100%;
-    justify-content: center;
+    width: 95%;
+    padding: 0.2rem;
+    border-radius: 0.2rem;
   }
 </style>
