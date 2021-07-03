@@ -42,7 +42,6 @@
   .list {
     width: 100%;
     text-align: left;
-   
   }
   span {
     height: 1rem;
@@ -54,8 +53,6 @@
   }
 
   @media (min-width: 640px) {
-    main {
-      max-width: none;
-    }
+   
   }
 </style>

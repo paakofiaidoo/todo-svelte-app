@@ -3,8 +3,15 @@
   import TodoItem from "../atoms/TodoItem.svelte";
 </script>
 
-
-  {#each todos as todo, i}
-    <TodoItem {...todo} i={i} />
-  {/each}
-
+<span>undone</span>
+{#each todos.filter(({ isComplete }) => {
+  return !isComplete;
+}) as todo, i}
+  <TodoItem {...todo} {i} />
+{/each}
+<span>done</span>
+{#each todos.filter(({ isComplete }) => {
+  return isComplete;
+}) as todo, i}
+  <TodoItem {...todo} {i} />
+{/each}
