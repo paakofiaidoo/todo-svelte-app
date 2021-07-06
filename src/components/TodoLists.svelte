@@ -1,6 +1,7 @@
 <script>
   export let todos;
   import TodoItem from "../atoms/TodoItem.svelte";
+  console.log(todos);
 </script>
 
 <span>undone</span>

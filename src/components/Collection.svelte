@@ -1,6 +1,14 @@
 <script>
-  export let name, color, tasks;
+  export let collection, active;
+
   import TodoLists from "../components/TodoLists.svelte";
+  setInterval(() => {
+    console.log(collection, active, collection[active], name, color, tasks);
+  }, 5000);
+
+  $: name = collection[active].name;
+  $: color = collection[active].color;
+  $: tasks = collection[active].tasks;
 </script>
 
 <div class="collection">
@@ -9,7 +17,7 @@
     <h2>{name}</h2>
   </div>
   <div class="list">
-    <TodoLists todos={tasks} />
+    <TodoLists bind:todos={tasks} />
   </div>
 </div>
 
@@ -53,6 +61,5 @@
   }
 
   @media (min-width: 640px) {
-   
   }
 </style>
