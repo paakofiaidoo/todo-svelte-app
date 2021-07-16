@@ -14,19 +14,19 @@
         {
           title: "kill 1",
           isComplete: false,
-          create: new Date(2021, 1, 12),
+          createdTime: new Date(2021, 1, 12),
           completeTime: new Date(2021, 6, 12),
         },
         {
           title: "kill 2",
           isComplete: false,
-          create: new Date(2021, 1, 12),
+          createdTime: new Date(2021, 1, 12),
           completeTime: new Date(2021, 6, 12),
         },
         {
           title: "kill 3",
           isComplete: true,
-          create: new Date(2021, 1, 12),
+          createdTime: new Date(2021, 1, 12),
           completeTime: new Date(2021, 6, 12),
         },
       ],
@@ -40,19 +40,19 @@
         {
           title: "kill 1",
           isComplete: false,
-          create: new Date(2021, 1, 12),
+          createdTime: new Date(2021, 1, 12),
           completeTime: new Date(2021, 6, 12),
         },
         {
           title: "kill 2",
           isComplete: false,
-          create: new Date(2021, 1, 12),
+          createdTime: new Date(2021, 1, 12),
           completeTime: new Date(2021, 6, 12),
         },
         {
           title: "kill 3",
           isComplete: true,
-          create: new Date(2021, 1, 12),
+          createdTime: new Date(2021, 1, 12),
           completeTime: new Date(2021, 6, 12),
         },
       ],
@@ -66,19 +66,19 @@
         {
           title: "kill 1",
           isComplete: false,
-          create: new Date(2021, 1, 12),
+          createdTime: new Date(2021, 1, 12),
           completeTime: new Date(2021, 6, 12),
         },
         {
           title: "kill 2",
           isComplete: false,
-          create: new Date(2021, 1, 12),
+          createdTime: new Date(2021, 1, 12),
           completeTime: new Date(2021, 6, 12),
         },
         {
           title: "kill 3",
           isComplete: true,
-          create: new Date(2021, 1, 12),
+          createdTime: new Date(2021, 1, 12),
           completeTime: new Date(2021, 6, 12),
         },
       ],
@@ -106,7 +106,9 @@
   };
   const removeCollection = () => {};
   const editCollection = () => {};
-  const addTask = () => {};
+  const addTask = (id, title = "", completeTime) => {
+    let newTask = { title, isComplete: false, completeTime,createdTime:new Date() };
+  };
   const removeTask = () => {};
   const editTask = () => {};
   let active = 0;

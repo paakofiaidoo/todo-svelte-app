@@ -9,6 +9,7 @@
   $: name = collection[active].name;
   $: color = collection[active].color;
   $: tasks = collection[active].tasks;
+  $: id = collection[active].id;
 </script>
 
 <div class="collection">
@@ -17,7 +18,7 @@
     <h2>{name}</h2>
   </div>
   <div class="list">
-    <TodoLists bind:todos={tasks} />
+    <TodoLists bind:todos={tasks} bind:id />
   </div>
 </div>
 

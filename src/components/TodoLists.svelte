@@ -1,7 +1,6 @@
 <script>
-  export let todos;
+  export let todos,id;
   import TodoItem from "../atoms/TodoItem.svelte";
-  console.log(todos);
 </script>
 
 <span>undone</span>
@@ -16,3 +15,7 @@
 }) as todo, i}
   <TodoItem {...todo} {i} />
 {/each}
+<form>
+  <p>Add todo</p>
+
+</form>
